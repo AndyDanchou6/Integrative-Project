@@ -1,10 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #0f0f0f;
+  /* overflow: hidden; */
 }
 
 /* Header */
@@ -34,12 +36,17 @@ body {
   background-size: cover;
   background-position: center;
 }
+/* Change opacity */
+
+/* main */
+.main {
+  display: flex;
+}
 
 /* Sidebar */
 .sidebar {
-  position: relative;
-  height: 100vh;
   width: 250px;
+  height: 100vh;
   box-shadow: 0 5px 10px rgb(47, 94, 252);
   border-radius: 10px;
 }
@@ -47,7 +54,7 @@ body {
 .sidebar ul li {
   font-size: 20px;
   padding: 20px;
-  box-shadow: 0 0 5px rgb(47, 94, 252);
+  box-shadow: 0 2px 5px rgb(47, 94, 252);
   text-indent: 15px;
 }
 
@@ -60,16 +67,16 @@ body {
   text-decoration: none;
   color: white;
   background-color: rgb(47, 94, 252);
+  border-radius: 10px;
 }
 
 /* Content */
 
 .contents {
-  position: absolute;
-  top: 75px;
-  left: 250px;
+  display: flex;
+  flex-direction: column;
   /* background-color: white; */
-  width: calc(100vw - 265px);
+  width: 100vw;
   height: 100vh;
 }
 
@@ -83,6 +90,15 @@ body {
 }
 
 .card div {
+  text-align: center;
+}
+
+.card h2 {
+  color: white;
+  margin: 23px auto;
+}
+
+.card .card-1 {
   height: 75px;
   width: 150px;
   border: 2px solid rgb(47, 94, 252);
@@ -90,18 +106,38 @@ body {
   margin: auto 0;
 }
 
-.card div:hover {
+.card .card-2 {
+  height: 75px;
+  width: 150px;
+  border: 2px solid rgb(252, 47, 74);
+  border-radius: 20px;
+  margin: auto 0;
+}
+
+.card .card-3 {
+  height: 75px;
+  width: 150px;
+  border: 2px solid rgb(47, 252, 64);
+  border-radius: 20px;
+  margin: auto 0;
+}
+
+.card .card-1:hover {
   background-color: blue;
 }
 
+.card .card-2:hover {
+  background-color: rgb(252, 47, 74);
+}
+
+.card .card-3:hover {
+  background-color: rgb(47, 252, 64);
+}
+
 .content-data {
-  width: calc(100vw - 265px);
-  height: 450px;
+  position: relative;
   margin: auto;
   /* background-color: white; */
 }
 
-/* .content-data table {
-  margin: auto;
-} */
 /* To add table design */
